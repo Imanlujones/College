@@ -12,7 +12,7 @@ class SecondHandler(webapp2.RequestHandler):
     	# do stuff with books...
         html_params = {
             "title": "Second Title",
-            "content": "Goodbye"
+            "content": ""
         }
         template = jinja_env.env.get_template('templates/tmpl.html')
         self.response.out.write(template.render(html_params))
