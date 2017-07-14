@@ -1,12 +1,16 @@
 #header {
     font: 1500px; 
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-    background-color: blue;
+    text-align:center;
 }
-
-/*.foo {
-	text-decoration: underline;
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
 }
+#favorites {
+    margin:1700px;
+}
+/*.color{
+    background-color: 
+}*/
