@@ -4,6 +4,7 @@ import webapp2
 from handlers import jinja_env
 from handlers import main_handler
 from handlers import second_handler
+from handlers import login_handler
 from handlers import third_handler
 
 jinja_env.init(os.path.dirname(__file__))
