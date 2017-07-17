@@ -6,7 +6,7 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-    	logging.info("MainHandler")
+        logging.info("MainHandler")
         html_params = {
             "title": "College Ebay",
             "content": "Hello"
