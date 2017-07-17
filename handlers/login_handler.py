@@ -20,17 +20,17 @@ class LoginHandler(webapp2.RequestHandler):
         self.response.out.write(template.render(dictionary))
 
                 def post(self):
-                	logging.info("USER SAID POST")
-                	r_name = self.request.get("form_name")
-                	r_classification = self.request.get("form_classification")
+                    logging.info("USER SAID POST")
+                    r_name = self.request.get("form_name")
+                    r_classification = self.request.get("form_classification")
 
-    	new_user_var = user_model.UserModel(
-    		user_name = r_name,
-    		form_classification = r_classification, 
-    		user_email = "FIX ME LATER",
-    	)
+        new_user_var = user_model.UserModel(
+            user_name = r_name,
+            form_classification = r_classification, 
+            user_email = "FIX ME LATER",
+        )
 
-    	new_user_var.put()
-    	self.redirect("/")
-    	#redirecrt them to any page on the website (that's what the / is)
+        new_user_var.put()
+        self.redirect("/")
+        #redirecrt them to any page on the website (that's what the / is)
             #dictionary["html_user"] = current_user.email()
