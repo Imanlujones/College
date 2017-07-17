@@ -19,10 +19,10 @@ class LoginHandler(webapp2.RequestHandler):
         template = jinja_env.env.get_template('templates/logintmpl.html')
         self.response.out.write(template.render(dictionary))
 
-                def post(self):
-                    logging.info("USER SAID POST")
-                    r_name = self.request.get("form_name")
-                    r_classification = self.request.get("form_classification")
+    def post(self):
+        logging.info("USER SAID POST")
+        r_name = self.request.get("form_name")
+        r_classification = self.request.get("form_classification")
 
         new_user_var = user_model.UserModel(
             user_name = r_name,
