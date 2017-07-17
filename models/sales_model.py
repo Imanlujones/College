@@ -2,8 +2,7 @@ from google.appengine.ext import ndb
 # Category
 # Item
 # Link(as a picture)
-# Person’s phone number
-# # Price
+# Price
 
 class SalesModel(ndb.Model):
     Category_model = ndb.StringProperty()
