@@ -1,10 +1,16 @@
 
-import jinja_env
+import jinja2
 import logging
 import webapp2
+import os
 #from [folder] import [filename]
 from models import user_model
 
+from google.appengine.ext import ndb
+from google.appengine.api import users 
+
+jinja_env = jinja2.Environment(
+    loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
