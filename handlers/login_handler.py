@@ -14,7 +14,7 @@ class LoginHandler(webapp2.RequestHandler):
                 "html_login_url": users.create_login_url("/login"),
             }
 
-        template = jinja_env.env.get_template('templates/logintmpl.html')
-        self.response.out.write(template.render(dictionary))
+            template = jinja_env.get_template('templates/logintmpl.html')
+            self.response.out.write(template.render(dictionary))
 
             #dictionary["html_user"] = current_user.email()
