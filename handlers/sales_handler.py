@@ -41,7 +41,13 @@ class SalesHandler(webapp2.RequestHandler):
                 person_number=r_personnumber,
                 price_amount=r_price
             )
-
         new_item.put()
-        self.redirect("/sales")
-
+        template = jinja_env.env.get_template('/templates/sale_2.0.html')
+        logging.info("Saleshandler")
+        sales_info = {
+            "Item":r_item,
+            "Category":r_category,
+            "Picture":r_url,
+            "Price":r_price,
+        }
+        self.response.out.write(template.render(sales_info))
