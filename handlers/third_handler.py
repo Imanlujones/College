@@ -22,5 +22,7 @@ class ThirdHandler(webapp2.RequestHandler):
 
         user = users.get_current_user()
         if user != None:
-            profile["html_user"] = user.email()
+            html_params["html_user"] = user.email()
         self.response.out.write(template.render(html_params))
+
+    
