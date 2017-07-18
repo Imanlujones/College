@@ -19,13 +19,16 @@ class FourthHandler(webapp2.RequestHandler):
             "title": "Profile",
             "content": "Hello"
         }
+        self.response.out.write(template.render(html_params))
     def post(self):
         logging.info("USER SAID POST")
-        r_item = logging.info(self.request.get("form_item"))
-        r_url = logging.info(self.request.get("form_url"))
-        r_category = logging.info(self.request.get("form_category"))
-        r_personnumber = logging.info(self.request.get("form_number"))
-        r_price = logging.info(self.request.get("form_price"))
+        r_item = self.request.get("form_item")
+        r_url = self.request.get("form_url")
+        r_category = self.request.get("form_category")
+        r_personnumber = self.request.get("form_number")
+        r_price = self.request.get("form_price")
+
+        logging.info(r_item)
 
         new_item = sales_model.SalesModel(
                 item_name=r_item,
@@ -35,8 +38,6 @@ class FourthHandler(webapp2.RequestHandler):
                 price_amount=r_price
             )
 
-        new_dog.put()
+        new_item.put()
         self.redirect("/")
 
-
-        self.response.out.write(template.render(html_params))
