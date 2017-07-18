@@ -11,7 +11,7 @@ from google.appengine.api import users
 
 
 
-class FourthHandler(webapp2.RequestHandler):
+class SalesHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.env.get_template('/templates/sales.html')
         logging.info("MainHandler")
@@ -29,15 +29,25 @@ class FourthHandler(webapp2.RequestHandler):
         r_price = self.request.get("form_price")
 
         logging.info(r_item)
+        logging.info(r_url)
+        logging.info(r_category)
+        logging.info(r_personnumber)
+        logging.info(r_price)
 
         new_item = sales_model.SalesModel(
                 item_name=r_item,
                 pic_url=r_url,
                 category_name=r_category,
-                number_name=r_personnumber,
+                person_number=r_personnumber,
                 price_amount=r_price
             )
-
         new_item.put()
-        self.redirect("/")
-
+        template = jinja_env.env.get_template('/templates/sale_2.0.html')
+        logging.info("Saleshandler")
+        sales_info = {
+            "Item":r_item,
+            "Category":r_category,
+            "Picture":r_url,
+            "Price":r_price,
+        }
+        self.response.out.write(template.render(sales_info))

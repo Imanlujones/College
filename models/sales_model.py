@@ -5,8 +5,8 @@ from google.appengine.ext import ndb
 # Price
 
 class SalesModel(ndb.Model):
-    Category_model = ndb.StringProperty()
-    Item_model = ndb.StringProperty()
+    category_name = ndb.StringProperty()
+    item_name = ndb.StringProperty()
     pic_url = ndb.StringProperty()
-    personmnumber_model = ndb.StringProperty()
-    Price_model = ndb.StringProperty()
+    person_number = ndb.StringProperty()
+    price_amount = ndb.StringProperty()
