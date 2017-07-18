@@ -14,5 +14,5 @@ app = webapp2.WSGIApplication([
     ('/', main_handler.MainHandler),
     ('/second', second_handler.SecondHandler),
     ('/profile', third_handler.ThirdHandler), 
-    ('/sales', fourth_handler.FourthHandler),
+    ('/sales', sales_handler.FourthHandler),
 ], debug=True)
