@@ -37,6 +37,6 @@ class CreateProfileHandler(webapp2.RequestHandler):
         )
 
         new_user_var.put()
-        self.redirect("/profile")
+        self.redirect("/listing")
         #redirecrt them to any page on the website (that's what the / is)
             #dictionary["html_user"] = current_user.email()
