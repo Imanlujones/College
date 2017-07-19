@@ -12,6 +12,12 @@ class listingHandler(webapp2.RequestHandler):
         new_items = sales_model.SalesModel.query(sales_model.SalesModel.category_name==self.request.get("type")).fetch()
         logging.info(new_items)
         sales_str = ""
+
+        logging.info("numberofitemsis" + (str(len(new_items))))
+
+
+
+
         for sales in new_items:
             sales_str += "<div>"
             sales_str += "<h2>User : " + "?" + "</h2>"
