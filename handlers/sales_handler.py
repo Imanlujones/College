@@ -47,7 +47,8 @@ class SalesHandler(webapp2.RequestHandler):
                 pic_url=r_url,
                 category_name=r_category,
                 person_number=r_personnumber,
-                price_amount=r_price
+                price_amount=r_price,
+                user_email=users.get_current_user().email(),
             )
         new_item.put()
         template = jinja_env.env.get_template('/templates/sale_2.0.html')

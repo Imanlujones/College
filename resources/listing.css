@@ -13,30 +13,10 @@ text-align:right;
 .Itemgroup{
 /*border:1px solid black;*/
 width:600px;
-display:inline-block;	
+display:inline-block;
+height: 140px;
 }
 
-
-.Itemgroup2{
-/*border:1px solid black;*/
-width:600px;
-display:inline-block;	
-}
-
-
-.Itemgroup3{
-/*border:1px solid black;*/
-width:600px;
-display:inline-block;	
-}
-
-
-
-div {
-    height: 140px;
-    width: 600px;
-  
-}
 
 body {
     background-color: gray

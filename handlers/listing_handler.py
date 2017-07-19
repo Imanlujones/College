@@ -3,7 +3,6 @@ import jinja_env
 import logging
 import webapp2
 from models import sales_model
-from handlers import sales_handler
 
 
 class listingHandler(webapp2.RequestHandler):
@@ -20,7 +19,7 @@ class listingHandler(webapp2.RequestHandler):
 
         for sales in new_items:
             sales_str += "<div>"
-            sales_str += "<h2>User : " + "?" + "</h2>"
+            sales_str += "<h2>User : " + str(sales.user_email) + "</h2>"
             sales_str += "<p>" + sales.category_name + "</p>" 
             sales_str += "<p>" + sales.item_name + "</p>"
             sales_str += "<p>Price : " + sales.price_amount + "</p>"

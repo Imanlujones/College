@@ -10,3 +10,4 @@ class SalesModel(ndb.Model):
     pic_url = ndb.StringProperty()
     person_number = ndb.StringProperty()
     price_amount = ndb.StringProperty()
+    user_email = ndb.StringProperty()
