@@ -15,7 +15,6 @@ class MainHandler(webapp2.RequestHandler):
         logging.info("MainHandler")
         html_params = {
             "title": "College Ebay",
-            "content": "Hello",
             "html_login_url": users.create_login_url("/createprofile"),
         }
         template = jinja_env.env.get_template('templates/maintmpl.html')
