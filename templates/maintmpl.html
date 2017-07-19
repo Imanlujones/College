@@ -1,10 +1,61 @@
-<!DOCTYPE html>
-<html>
+
+
 <head>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<style>
+body {
+	background-color:#686868;
+	font-family: 'Josefin Sans', sans-serif;
+}
+.container {
+	position: relative;
+	width: 50%;
+}
+
+}
+.image {
+    opacity: 1;
+    display: block;
+    margin: auto;
+    width: 40%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+.text {
+  background-color: #F58220;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
 	<title>{{ Helloooo }}</title>
 </head>
 <body>
-{{ content }}
-<img src = "http://wiki.teamliquid.net/commons/images/thumb/f/fd/Team_Random_logo.png/600px-Team_Random_logo.png"></img> 
+
+<div class="container">
+  <img src = "/resources/CSM_picture.png" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text"> <a href ="{{html_login_url }}">LOGIN</a>
+    </div>
+   
+  </div>
+</div>
+
 </body>
-</html>
