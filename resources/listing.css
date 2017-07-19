@@ -1,0 +1,34 @@
+
+
+
+.center{
+text-align:center;	
+}
+
+
+.right{
+text-align:right;		
+}
+
+.Itemgroup{
+/*border:1px solid black;*/
+width:500px;
+display:inline-block;	
+}
+
+
+div {
+    height: 160px;
+    width: 500px;
+  
+}
+
+body {
+    background-color: gray
+    ;
+}
+
+/*.pink{
+color:pink;	
+}
+*/
