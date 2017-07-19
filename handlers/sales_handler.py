@@ -17,7 +17,7 @@ class SalesHandler(webapp2.RequestHandler):
         logging.info("MainHandler")
         html_params = {
             "title": "Profile",
-            "content": "Hello" + str(users)
+            "content": "Hello" + str(User)
         }
         self.response.out.write(template.render(html_params))
     def post(self):

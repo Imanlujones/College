@@ -49,6 +49,6 @@ class LoginHandler(webapp2.RequestHandler):
             "Classification":r_classification,
             "Major": r_major,
         }
-        self.redirect("/")
+        self.redirect("/listing")
         #redirecrt them to any page on the website (that's what the / is)
             #dictionary["html_user"] = current_user.email()
