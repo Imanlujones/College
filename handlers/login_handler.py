@@ -31,6 +31,9 @@ class LoginHandler(webapp2.RequestHandler):
         r_classification = self.request.get("form_classification")
         r_pic = self.request.get("form_pic")
         r_major = self.request.get ("form_major")
+        logging.info(r_name)
+        logging.info(r_classification)
+        logging.info(r_major)
 
         new_user_var = user_model.UserModel(
             user_name = r_name,
@@ -39,6 +42,13 @@ class LoginHandler(webapp2.RequestHandler):
         )
 
         new_user_var.put()
-        self.redirect("/")
+        template = jinja_env.env.get_template('/templates/sale_2.0.html')
+        logging.info("LoginHandler")
+        user_info={
+            "User":r_name,
+            "Classification":r_classification,
+            "Major": r_major,
+        }
+        self.redirect("/listing")
         #redirecrt them to any page on the website (that's what the / is)
             #dictionary["html_user"] = current_user.email()
