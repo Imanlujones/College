@@ -8,7 +8,7 @@ from models import sales_model
 
 from google.appengine.ext import ndb
 from google.appengine.api import users
-
+from handlers import login_handler
 
 
 class SalesHandler(webapp2.RequestHandler):
@@ -17,7 +17,7 @@ class SalesHandler(webapp2.RequestHandler):
         logging.info("MainHandler")
         html_params = {
             "title": "Profile",
-            "content": "Hello"
+            "content": "Hello" + str(users)
         }
         self.response.out.write(template.render(html_params))
     def post(self):
