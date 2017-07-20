@@ -8,12 +8,14 @@ h1{
 }
 
 .input {
-	background-color:white;
+	background-color:#00cc99;
 	font-family: 'Josefin Sans', sans-serif;
 	text-align:center;
+	color: white;
 }
 
 
 form{
 	font-size:30px;
+	color:white;
 }
