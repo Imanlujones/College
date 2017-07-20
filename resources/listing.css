@@ -1,7 +1,7 @@
 
 
 
-/*
+
 li a:hover:not(.active) {
     background-color: #111;
 }
@@ -12,10 +12,7 @@ li a:hover:not(.active) {
 
 
 
-.center{
-text-align:center;	
-}
-*/
+
 
 ul {
 	
@@ -55,7 +52,6 @@ text-align:right;
 }
 
 .Itemgroup{
-/*border:1px solid black;*/
 
 width:600px;
 display:inline-block;
@@ -82,11 +78,14 @@ img {
 body {
     background-color: gray;
 }
+#align{
+	margin-left:200px;
+}
 
 
 
 
-/*Creating navigation bar*/
+/*Creating navigation bar
 
 
 
