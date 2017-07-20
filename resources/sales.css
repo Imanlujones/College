@@ -3,6 +3,17 @@ img {
 	height:300px;
 }
 
-body{
-	text-align: center;
+h1{
+	font-size:100px;
+}
+
+.input {
+	background-color:#686868;
+	font-family: 'Josefin Sans', sans-serif;
+	text-align:center;
+}
+
+
+form{
+	font-size:30px;
 }
