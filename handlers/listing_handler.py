@@ -20,10 +20,10 @@ class listingHandler(webapp2.RequestHandler):
         for sales in new_items:
             sales_str += "<div>"
             sales_str += "<h2>User : " + str(sales.user_email) + "</h2>"
-            sales_str += "<p>" + sales.category_name + "</p>" 
-            sales_str += "<p>" + sales.item_name + "</p>"
-            sales_str += "<p>Price :" + " " + sales.price_amount + "</p>"
-            sales_str += "<p>Contact Info : " + sales.person_number + "</p>"
+            # sales_str += "<p>" + sales.category_name 
+            sales_str += "  " + sales.item_name + "</p>"
+            sales_str += "<p>Price :" + " " + sales.price_amount + "  " + "  "
+            sales_str += "Contact Info : " + sales.person_number + "</p>"
             sales_str += "<p>" + "<img src='"+sales.pic_url+"'>" + "</p>"
             sales_str += "</div>"
         html_params = {
