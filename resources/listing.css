@@ -83,6 +83,39 @@ body {
 	margin-left:200px;
 }
 
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+a:hover, a:active {
+    background-color: red;
+}
+</style>
+</head>
+<body>
+
+<a href="default.asp" target="_blank">This is a link</a>
+
+</body>
+</html>
+
+
+<div class= "Itemgroup">
+    <p><font size="=+1"><right><u>Other</u></right></font></p>
+    <!-- <ul style="list-style-type:none"> -->
+    <div><right><a href="/listing?type=textbooks">Textbooks</right></a></div>
+    <div><a href="/listing?type=notebooks">Notebooks</a></div>
+    <div><a href="/listing?type=pencils">Pencils</a></div>
+</div>  
+</div>
+
+
 
 
 
