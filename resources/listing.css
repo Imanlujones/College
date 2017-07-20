@@ -60,16 +60,27 @@ text-align:right;
 width:600px;
 display:inline-block;
 height: 140px;
+font-size: 30px;
+}
+
+.align{
+    display:inline;
+}
+
+.border{
+    border:5px solid black;
+    outline-color: orange;
+    font-size:30px;
+}
+
+img {
+    width:400px;
+    height:300px;
 }
 
 
-
-
-
- 
 body {
-    background-color: gray
-    ;
+    background-color: gray;
 }
 
 
