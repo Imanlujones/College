@@ -4,5 +4,18 @@ div {
     width: 320px;
     padding: 10px;
     border: 5px solid gray;
-    margin: 0;
+    text-align: center;
 }
+
+
+img {
+  width:200px;
+  height:300px;
+}
+
+body{
+	background-color: #00cc99;
+	text-align:center;
+	color:white;
+}
+
